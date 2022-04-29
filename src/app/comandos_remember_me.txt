@@ -1,0 +1,6 @@
+http://mcg.mbitson.com/#!?mcgpalette0=%23009b99 --> pagina para la gama de colores
+https://www.youtube.com/watch?v=6Yg_jDFsY1E&list=TLPQMjkwNDIwMjKmmreGHirxgQ&index=1 --> video explicando el cambio de color
+
+ng g m pages/registro -m=app --route registro --> crea un modulo/pagina  y registra la ruta 
+ng g c pages/registro/<nombre_componente> --> genera el componente <nombre_componente> dentro de registro
+ng s s shared/service/<nombre_servicio> --> genera un servicio

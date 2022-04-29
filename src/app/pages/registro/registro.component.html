@@ -1,0 +1,109 @@
+<div class="container">
+    <form class="form" #registerForm="ngForm">
+      <h1>Registro</h1>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="nombre"
+          required
+          [(ngModel)]="model.nombre"
+          name="nombre"
+          #nombre="ngModel"
+        />
+        <mat-error *ngIf="!nombre.valid || nombre.pristine">
+          El nombre es requerido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="apellido"
+          required
+          [(ngModel)]="model.apellido"
+          name="apellido"
+          #apellido="ngModel"
+        />
+        <mat-error *ngIf="!apellido.valid || apellido.pristine">
+          El apellido es requerido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="rut"
+          required
+          [(ngModel)]="model.rut"
+          name="rut"
+          #rut="ngModel"
+        />
+        <mat-error *ngIf="!rut.valid || rut.pristine">
+          El rut es requerido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="correo electronico"
+          required
+          [(ngModel)]="model.correo"
+          name="correo"
+          #correo="ngModel"
+        />
+        <mat-error *ngIf="!correo.valid || correo.pristine">
+          El correo electronico es requerido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          matInput
+          placeholder="telefono"
+          required
+          [(ngModel)]="model.telefono"
+          name="telefono"
+          #telefono="ngModel"
+        />
+        <mat-error *ngIf="!telefono.valid || telefono.pristine">
+          El telefono es requerido
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          type="password"
+          matInput
+          placeholder="contraseña"
+          required
+          [(ngModel)]="model.contrasena"
+          name="contrasena"
+          #contrasena="ngModel"
+        />
+        <mat-error *ngIf="!contrasena.valid || contrasena.pristine">
+          El contrasena es requerida
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="form__element">
+        <input
+          type="password"
+          matInput
+          placeholder="repita su contraseña"
+          required
+          [(ngModel)]="model.rcontrasena"
+          name="rcontrasena"
+          #rcontrasena="ngModel"
+        />
+        <mat-error *ngIf="!rcontrasena.valid || rcontrasena.pristine">
+          El contrasena es requerida
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <button
+      class="button"
+      [disabled]="!registerForm.form.valid"
+      mat-raised-button
+      color="primary"
+      type="submit"
+      (click)="onSubmit(registerForm)"
+    >
+      Enviar
+    </button>
+  </div>
+  
